@@ -14,6 +14,8 @@ import './styles/styles.scss'
 // Router import
 import AppRouter from './routers/AppRouter'
 
+// DB Imports
+import './firebase/firebase'
 
 
 // Components
