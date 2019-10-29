@@ -4,7 +4,6 @@ import database from '../../firebase/firebase'
 
 
 
-
 // Actions constructors
 // ADD_EXPENSE
 export const addExpense = (expense) => (
@@ -34,11 +33,24 @@ export const startAddExpense = (expenseData = {}) => {
 }
 
 
+
 // REMOVE_EXPENSE
-export const removeExpense = ({ id }) => ({
+export const removeExpense = (id) => ({
     type: 'REMOVE_EXPENSE',
     id
 })
+
+export const startRemoveExpense = ({ id } = {}) => {
+    return (dispatch) => {
+        return database.ref('expenses/' + id)
+            .remove()
+            .then(() => {
+                dispatch(removeExpense(id))
+            }
+        )
+    }
+}
+
 
 
 // EDIT_EXPENSE
@@ -47,6 +59,16 @@ export const editExpense = (id, updates) => ({
     id,
     updates,
 })
+
+export const startEditExpense = (id, updates) => {
+    return (dispatch) => {
+        return database.ref('expenses/' + id)
+            .update(updates)
+            .then(() => {
+                dispatch(editExpense(id, updates))
+            })
+    }
+}
 
 
 
