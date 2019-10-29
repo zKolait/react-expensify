@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 // Store General
 import configureStore from './redux/store/configueStore'
 // Store Imports
+import { startSetExpenses } from './redux/actions/expenses'
 
 // Style
 import 'normalize.css/normalize.css'
@@ -31,4 +32,8 @@ const jsx = (
 
 
 // Render
-ReactDOM.render(jsx, document.getElementById('app'))
+ReactDOM.render(<p>Loading...</p>, document.getElementById('app'))
+
+store.dispatch(startSetExpenses()).then(() => {
+    ReactDOM.render(jsx, document.getElementById('app'))
+})
