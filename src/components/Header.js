@@ -9,7 +9,9 @@ import { startLogout } from '../redux/actions/auth'
 // Component
 export const Header = ({ startLogout }) => (
     <header>
-        <h1>Expensify</h1>
+        <NavLink to="/dashboard">
+            <h1>Expensify</h1>
+        </NavLink>
         <nav>
             <ul>
                 <li>
@@ -18,12 +20,11 @@ export const Header = ({ startLogout }) => (
                 <li>
                     <NavLink to="/create" activeClassName="is-active">Create</NavLink>
                 </li>
-                <li>                
-                    <NavLink to="/help" activeClassName="is-active">Help</NavLink>
+                <li>
+                    <button onClick={startLogout}>Logout</button>
                 </li>
             </ul>
         </nav>
-        <button onClick={startLogout}>Logout</button>
     </header>
 )
 

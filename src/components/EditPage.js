@@ -9,7 +9,7 @@ import { startEditExpense, startRemoveExpense } from '../redux/actions/expenses'
 
 // Component
 const EditPage = (props) => (
-    <div>
+    <div className="main--container">
         <ExpenseForm
             expense={props.expense}
             onSubmit={(expense) => {
@@ -24,6 +24,7 @@ const EditPage = (props) => (
         }
         />
         <button 
+            className="remove__button"
             onClick={() => {
                 props.dispatch(startRemoveExpense({ id: props.expense.id }))
 

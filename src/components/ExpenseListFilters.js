@@ -31,10 +31,11 @@ class ExpenseListFilters extends React.Component {
     // Render
     render () {
         return (
-            <div>
+            <div className="form--container">
                 <input 
                     type="text" 
-                    value={this.props.filters.text} 
+                    value={this.props.filters.text}
+                    placeholder="Rechercher..."
                     onChange={
                         (e) => (this.props.dispatch(setTextFilter(e.target.value)))
                     } 

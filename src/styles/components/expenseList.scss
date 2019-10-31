@@ -1,0 +1,131 @@
+.form--container {
+    max-width: 500px;
+
+    input {
+        box-sizing: border-box;
+        width: 100%;
+        height: 32px;
+        margin: 0px 0px 5px 0px;
+        padding-left: 14px;
+        outline: none;
+        border: 1px solid #dbdbdb;
+    }
+
+    select {
+        box-sizing: border-box;
+        width: 100%;
+        height: 32px;
+        margin: 0px 0px 5px 0px;
+        padding-left: 10px;
+        outline: none;
+        border: 1px solid #dbdbdb;
+    }
+
+    .DateRangePicker {
+        box-sizing: border-box !important;
+        width: 100% !important;
+        height: 50px !important;
+
+        .DateRangePickerInput {
+            box-sizing: border-box !important;
+            width: 100% !important;
+            height: 50px !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    textarea {
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 350px;
+        margin: 5px 0px 5px 0px;
+        padding: 5px 10px 5px 10px !important;
+        border: 1px solid #dbdbdb;
+        outline: none;
+    }
+
+    .button {
+        cursor: pointer;
+        position: relative;
+        border: 0;
+        border-radius: 4px;
+        width: 100%;
+        height: 36px;
+        font-weight: bold;
+        outline: none;
+        -webkit-transition: 0.15s; /* Safari prior 6.1 */
+        transition: 0.15s;
+        background: #3F51B5;
+        color: white;
+        resize: none;
+    }
+}
+
+.expense--list {
+    h2 {
+        margin-top: 50px;
+    }
+
+    .expense--item {
+        max-width: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+
+        a {
+            color: rgb(32, 32, 32);
+            text-decoration: none;
+
+            h3 {
+                margin: 10px 0px 10px 0px;
+            }
+        }
+
+        .expense--item__details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+
+            p  {
+                margin: 0 0 0 15px;
+            }
+
+            .expense--item__amount {
+                font-weight: bold;
+            }
+
+            a {
+                font-size: 18px;
+                font-weight: 300;
+                margin: 0 0 0 15px;
+                color: rgb(85, 85, 85);
+
+                &:hover {
+                    color: rgb(0, 0, 0);
+                }
+            }
+        }
+    }
+}
+
+
+.remove__button {
+    cursor: pointer;
+    position: relative;
+    border: 0;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 500px;
+    height: 36px;
+    font-weight: bold;
+    outline: none;
+    -webkit-transition: 0.15s; /* Safari prior 6.1 */
+    transition: 0.15s;
+    background: #F44336;
+    color: white;
+    margin-top: 5px;
+}

@@ -7,8 +7,13 @@ import { startLogin } from '../redux/actions/auth'
 
 // Component
 const LoginPage = ({ startLogin }) => (
-    <div>
-        <button onClick={startLogin}>Login</button>
+    <div className="background--container black">
+        <div className="background--container__blur--filter opacity--filter"></div>
+        <div className="login--page__container">
+            <h1>Expensify</h1>
+            <p>Get your expenses under control.</p>
+            <button onClick={startLogin}>Login</button>
+        </div>
     </div>
 )
 

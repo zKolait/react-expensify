@@ -8,8 +8,8 @@ import selectExpenses from '../redux/selectors/expenses'
 
 // Component
 const ExpenseList = (props) => (
-    <div>
-        <h1>Expense List</h1>
+    <div className="expense--list">
+        <h2>Expense List</h2>
         <div>
             { props.expenses.map((expense) => (
                 <ExpenseListItem 
